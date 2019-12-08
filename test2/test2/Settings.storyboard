@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="galaxy" translatesAutoresizingMaskIntoConstraints="NO" id="NaV-ka-FMK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="galaxy" translatesAutoresizingMaskIntoConstraints="NO" id="NaV-ka-FMK">
                                 <rect key="frame" x="-100" y="-46" width="1209" height="834"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayButton" translatesAutoresizingMaskIntoConstraints="NO" id="cyK-f2-DTB">
