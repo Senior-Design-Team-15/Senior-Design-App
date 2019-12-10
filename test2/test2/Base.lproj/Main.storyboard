@@ -30,7 +30,7 @@
                                 <rect key="frame" x="367" y="305" width="382" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="76"/>
-                                <state key="normal" title="PLAY" backgroundImage="asteroid">
+                                <state key="normal" title="PLAY" backgroundImage="fireball">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -57,8 +57,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="asteroid" width="166.5" height="166.5"/>
-        <image name="galaxy" width="5257" height="3474"/>
+        <image name="fireball" width="138.5" height="123"/>
+        <image name="galaxy" width="640" height="427"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="name" width="324" height="74.5"/>
         <image name="rocket" width="426.5" height="417"/>

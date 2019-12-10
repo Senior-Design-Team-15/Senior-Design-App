@@ -198,7 +198,7 @@
     </scenes>
     <resources>
         <image name="backArrow" width="201" height="138"/>
-        <image name="galaxy" width="5257" height="3474"/>
+        <image name="galaxy" width="640" height="427"/>
         <image name="grayButton" width="237" height="50"/>
     </resources>
 </document>
