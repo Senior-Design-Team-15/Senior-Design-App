@@ -38,7 +38,7 @@
                                 <rect key="frame" x="880" y="620" width="212" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <state key="normal" backgroundImage="gear"/>
+                                <state key="normal" backgroundImage="gear" catalog="system"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -57,10 +57,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="asteroid" width="500" height="500"/>
+        <image name="asteroid" width="166.5" height="166.5"/>
         <image name="galaxy" width="5257" height="3474"/>
-        <image name="gear" width="1920" height="1918"/>
-        <image name="name" width="972" height="224"/>
-        <image name="rocket" width="1280" height="1252"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="name" width="324" height="74.5"/>
+        <image name="rocket" width="426.5" height="417"/>
     </resources>
 </document>
