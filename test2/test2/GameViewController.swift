@@ -10,10 +10,28 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+extension UIView {
+func addBackground() {
+    // screen width and height:
+    let width = UIScreen.main.bounds.size.width
+    let height = UIScreen.main.bounds.size.height
 
+    let imageViewBackground = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+    imageViewBackground.image = UIImage(named: "galaxy")
+
+    // you can change the content mode:
+    imageViewBackground.contentMode = UIView.ContentMode.scaleAspectFill
+
+    self.addSubview(imageViewBackground)
+    self.sendSubviewToBack(imageViewBackground)
+}}
+
+class GameViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addBackground()
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
