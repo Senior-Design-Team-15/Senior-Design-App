@@ -9,65 +9,89 @@
 
 import SpriteKit
 import GameplayKit
+import Speech
+
 
 class GameScene: SKScene {
+    private var label : SKLabelNode?
+    var viewController : GameViewController!
 
-override func didMove(to view: SKView) {
-    
+    override func didMove(to view: SKView) {
+        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
+        if let label = self.label {
+            label.alpha = 0.0
+            label.run(SKAction.fadeIn(withDuration: 2.0))
+        }
+      //  if (self.viewController.label0.text != "Label 0"){
+      //      let astroid0=SKSpriteNode(imageNamed: "fireball")
+      //      astroid0.position=CGPoint(x:125 , y: 500)
+      //      self.addChild(astroid0)
+      //  }
+        self.run(SKAction.wait(forDuration: 2),completion:{[unowned self] in
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            if let vc = appDelegate.window?.rootViewController {
+                self.viewController = vc as? GameViewController
+                self.viewController.labelQ.isHidden = false
+            }
+            
+        })
+        
     // make the scene position from the lower left corner regardless of any settings
-    self.anchorPoint = .zero
+        self.anchorPoint = .zero
 
  
     // create our rocket sprite node
-    let rocket = SKSpriteNode(imageNamed: "rocket")
-     // attach the rocket to the scenes node tree
-    // define rocket position and size
-    rocket.position = CGPoint(x:525, y:150) // position our rocket node
-    rocket.size = CGSize(width:200, height:200) // size our rocket
-    self.addChild(rocket)
+//        let rocket = SKSpriteNode(imageNamed: "rocket")
+//     // attach the rocket to the scenes node tree
+//    // define rocket position and size
+//        rocket.position = CGPoint(x:525, y:100) // position our rocket node
+//        rocket.size = CGSize(width:100, height:150) // size our rocket
+//        self.addChild(rocket)
+    
     
     // set up astroid
-    let astroid=SKSpriteNode(imageNamed: "astroid")
-    astroid.position=CGPoint(x:125 , y: 650)
-    self.addChild(astroid)
-
-    // set up second astroid
-    let astroid2=SKSpriteNode(imageNamed: "astroid")
-    astroid2.position=CGPoint(x:325, y:650)
-    self.addChild(astroid2)
+//        let asteroid0=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid0.position=CGPoint(x:125 , y: 500)
+//        self.addChild(asteroid0)
+//
+//        let asteroid1=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid1.position=CGPoint(x:325, y:450)
+//        self.addChild(asteroid1)
+//
+//    // set up astroid
+//        let asteroid2=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid2.position=CGPoint(x:525, y:500)
+//        self.addChild(asteroid2)
+//
+//    // set up astroid
+//        let asteroid3=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid3.position=CGPoint(x:725, y:450)
+//        self.addChild(asteroid3)
+//
+//        let asteroid4=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid4.position=CGPoint(x:925, y:500)
+//        addChild(asteroid4)
     
-    // set up third astroid
-    let astroid3=SKSpriteNode(imageNamed: "astroid")
-    astroid3.position=CGPoint(x:525, y:650)
-    self.addChild(astroid3)
+//        let asteroid5=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid5.position=CGPoint(x:125, y:300)
+//        addChild(asteroid5)
+//
+//        let asteroid6=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid6.position=CGPoint(x:325, y:250)
+//        addChild(asteroid6)
+//
+//        let asteroid7=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid7.position=CGPoint(x:525, y:300)
+//        addChild(asteroid7)
+//
+//        let asteroid8=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid8.position=CGPoint(x:725, y:250)
+//        addChild(asteroid8)
+//
+//        let asteroid9=SKSpriteNode(imageNamed: "asteroid")
+//        asteroid9.position=CGPoint(x:925, y:300)
+//        addChild(asteroid9)
     
-    let astroid4=SKSpriteNode(imageNamed: "astroid")
-    astroid4.position=CGPoint(x:725, y:650)
-    addChild(astroid4)
-    
-    let astroid5=SKSpriteNode(imageNamed: "astroid")
-    astroid5.position=CGPoint(x:925, y:650)
-    addChild(astroid5)
-    
-    let astroid6=SKSpriteNode(imageNamed: "astroid")
-    astroid6.position=CGPoint(x:125, y:450)
-    addChild(astroid6)
-    
-    let astroid7=SKSpriteNode(imageNamed: "astroid")
-    astroid7.position=CGPoint(x:325, y:450)
-    addChild(astroid7)
-    
-    let astroid8=SKSpriteNode(imageNamed: "astroid")
-    astroid8.position=CGPoint(x:525, y:450)
-    addChild(astroid8)
-    
-    let astroid9=SKSpriteNode(imageNamed: "astroid")
-    astroid9.position=CGPoint(x:725, y:450)
-    addChild(astroid9)
-    
-    let astroid10=SKSpriteNode(imageNamed: "astroid")
-    astroid10.position=CGPoint(x:925, y:450)
-    addChild(astroid10)
     // next steps are to add shooting on tap causing the fireball to appear
     // make the rocket stop moving
     
@@ -80,25 +104,22 @@ override func didMove(to view: SKView) {
     //let rocketsequence=SKAction.sequence([rocketmove,remove,rocketfadein])
     //rocket.run(rocketsequence)
        
-    // set up galaxy background
-    let background=SKSpriteNode(imageNamed: "galaxy")
-    background.position=CGPoint(x: 0, y: 0)
-    background.size=CGSize(width:2100, height:1600)
-    addChild(background) // add background to scene
     
+    //set up galaxy background
+        let background=SKSpriteNode(imageNamed: "galaxy")
+        background.position=CGPoint(x: 0, y: 0)
+        background.size=CGSize(width:2100, height:1600)
+        addChild(background) // add background to scene
     
   
  //https://www.raywenderlich.com/2619-sprite-kit-tutorial-space-shooter#toc-anchor-012
     
-    }
-     
+        }
+        
    
     
     }
 
-    
-  
-    
 
 
 
