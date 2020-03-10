@@ -20,6 +20,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         //super.viewDidLoad()
+        //what makes GaveViewController.swift(this class) communicate with GameScene.swift
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
@@ -62,6 +63,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     
+    //variables for labels which text gets set to on the asteroids
     var labelQ:UILabel!
     var label0:UILabel!
     var label1:UILabel!
@@ -77,11 +79,12 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Setting up labels for question label and individual asteroid labels
+        //Come back to add changing questions to labelQ.text
         labelQ = UILabel(frame: CGRect(x:75,y: 65,width: 1500,height: 75))
         labelQ.textAlignment = NSTextAlignment.left
         labelQ.textColor = .white
         labelQ.font = UIFont(name:"HelveticaNeue-Bold", size: 30.0)
-        labelQ.text = "Say something, I'm listening..."
+        labelQ.text = "What did you have for breakfast?"
         self.view.addSubview(labelQ)
         
         //adding individual label containers for asteroids
@@ -156,7 +159,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.view.addSubview(label9)
         //
         
-        labelQ.isHidden = true
+        labelQ.isHidden = true//Question initally hidden, GameScene sets it show up in 2 seconds
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: "GameScene") {
                 scene.scaleMode = .aspectFill
@@ -166,7 +169,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
             view.showsFPS = true
             view.showsNodeCount = true
             
-            //set up asteroids and rocket
+            //set up asteroids and rocket images
             var asteroidImage0: UIImageView?
             var asteroidImage1: UIImageView?
             var asteroidImage2: UIImageView?
@@ -181,7 +184,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
             
             let rocket : UIImage = UIImage(named:"rocket")!
             rocketImage = UIImageView(image: rocket)
-            rocketImage?.frame = CGRect(x: 475, y: 600, width: 100, height: 150)//0
+            rocketImage?.frame = CGRect(x: 475, y: 600, width: 100, height: 150)
             self.view.addSubview(rocketImage!)
             
             let asteroid : UIImage = UIImage(named:"asteroid")!
@@ -190,39 +193,39 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
             self.view.addSubview(asteroidImage0!)
             //1
             asteroidImage1 = UIImageView(image: asteroid)
-            asteroidImage1?.frame = CGRect(x: 250, y: 250, width: 150, height: 150)//0
+            asteroidImage1?.frame = CGRect(x: 250, y: 250, width: 150, height: 150)//1
             self.view.addSubview(asteroidImage1!)
             //2
             asteroidImage2 = UIImageView(image: asteroid)
-            asteroidImage2?.frame = CGRect(x: 450, y: 200, width: 150, height: 150)//0
+            asteroidImage2?.frame = CGRect(x: 450, y: 200, width: 150, height: 150)//2
             self.view.addSubview(asteroidImage2!)
             //3
             asteroidImage3 = UIImageView(image: asteroid)
-            asteroidImage3?.frame = CGRect(x: 650, y: 250, width: 150, height: 150)//0
+            asteroidImage3?.frame = CGRect(x: 650, y: 250, width: 150, height: 150)//3
             self.view.addSubview(asteroidImage3!)
             //4
             asteroidImage4 = UIImageView(image: asteroid)
-            asteroidImage4?.frame = CGRect(x: 850, y: 200, width: 150, height: 150)//0
+            asteroidImage4?.frame = CGRect(x: 850, y: 200, width: 150, height: 150)//4
             self.view.addSubview(asteroidImage4!)
             //5  bgImage?.frame = CGRect(x: 25, y: 375, width: 200, height: 200)
             asteroidImage5 = UIImageView(image: asteroid)
-            asteroidImage5?.frame = CGRect(x: 50, y: 400, width: 150, height: 150)//0
+            asteroidImage5?.frame = CGRect(x: 50, y: 400, width: 150, height: 150)//5
             self.view.addSubview(asteroidImage5!)
             //6
             asteroidImage6 = UIImageView(image: asteroid)
-            asteroidImage6?.frame = CGRect(x: 250, y: 450, width: 150, height: 150)//0
+            asteroidImage6?.frame = CGRect(x: 250, y: 450, width: 150, height: 150)//6
             self.view.addSubview(asteroidImage6!)
             //7
             asteroidImage7 = UIImageView(image: asteroid)
-            asteroidImage7?.frame = CGRect(x: 450, y: 400, width: 150, height: 150)//0
+            asteroidImage7?.frame = CGRect(x: 450, y: 400, width: 150, height: 150)//7
             self.view.addSubview(asteroidImage7!)
             //8
             asteroidImage8 = UIImageView(image: asteroid)
-            asteroidImage8?.frame = CGRect(x: 650, y: 450, width: 150, height: 150)//0
+            asteroidImage8?.frame = CGRect(x: 650, y: 450, width: 150, height: 150)//8
             self.view.addSubview(asteroidImage8!)
             //9
             asteroidImage9 = UIImageView(image: asteroid)
-            asteroidImage9?.frame = CGRect(x: 850, y: 400, width: 150, height: 150)//0
+            asteroidImage9?.frame = CGRect(x: 850, y: 400, width: 150, height: 150)//9
             self.view.addSubview(asteroidImage9!)
             
             
@@ -311,50 +314,51 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                 //output text from voice input to screen in labelQ
                 print(result?.bestTranscription.formattedString)//printing to console
                 //finding how many words are spoken
-                let voiceToTextOutput = result?.bestTranscription.formattedString
-                let components = voiceToTextOutput?.components(separatedBy: .whitespacesAndNewlines)
-                let numOfWords = components?.filter { !$0.isEmpty }
+                let voiceToTextOutput = result?.bestTranscription.formattedString//voice to text
+                let components = voiceToTextOutput?.components(separatedBy: .whitespacesAndNewlines)//seperate array by white spaces and newline characters
+                let numOfWords = components?.filter { !$0.isEmpty }//numOfWords.count keeps track of how many words have been said
                 print(numOfWords?.count)
-                let splitStringArray = voiceToTextOutput?.split(separator: " ").map({ (substring) in
-                    return String(substring)
+                let splitStringArray = voiceToTextOutput?.split(separator: " ").map({ (substring) in//splitting input sentence into an array with a single word in each loation
+                    return String(substring)//returns subString so cast to a String
                 })
-                var i = 0;
-                var bgImage: UIImageView?
-                let fireball : UIImage = UIImage(named:"fireball")!
-                bgImage = UIImageView(image: fireball)
-               // var fireball = UIImage(named: "fireball")
+                var i = 0;//iterator
+                //
+                var fbImage: UIImageView?//ImageView fireball variable
+                let fireball : UIImage = UIImage(named:"fireball")!// set fireball image
+                fbImage = UIImageView(image: fireball)//set fireball image to fireball ImageView
+    
                 //loop to fill in labels as person is talking
-                while(i != numOfWords?.count ?? 0 ){
-                    if(splitStringArray?[0] != nil){
-                       // self.label0.text = splitStringArray?[0]
-                        i+=1;
-                        bgImage?.frame = CGRect(x: 20, y: 175, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
-                        self.view.addSubview(self.label0)
-                        self.label0.bringSubviewToFront(self.label0)
-                        self.label0.text = splitStringArray?[0]
-                        if( i == numOfWords?.count){
+                while(i != numOfWords?.count ?? 0 ){//while count of words isn't zero
+                    if(splitStringArray?[0] != nil){ //first word, index zero of splitStringArray isn't nil
+                       
+                        i+=1;//counter
+                        fbImage?.frame = CGRect(x: 20, y: 175, width: 200, height: 200)//image location and size
+                        self.view.addSubview(fbImage!)//add to subview
+                        self.view.addSubview(self.label0)//add label0 to subview after(to be on top of image)
+                       // self.label0.bringSubviewToFront(self.label0)
+                        self.label0.text = splitStringArray?[0]//add word spoken to label
+                        if( i == numOfWords?.count){//if last word spoken; break out of while loop
                             break
                         }
                     }
                     if(splitStringArray?[1] != nil){
-                      //  self.label1.text = splitStringArray?[1]
+                    
                         i+=1;
-                        bgImage?.frame = CGRect(x: 220, y: 225, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
+                        fbImage?.frame = CGRect(x: 220, y: 225, width: 200, height: 200)
+                        self.view.addSubview(fbImage!)
                         self.view.addSubview(self.label1)
-                        self.label1.bringSubviewToFront(self.label1)
+                        //self.label1.bringSubviewToFront(self.label1)
                         self.label1.text = splitStringArray?[1]
                         if( i == numOfWords?.count){
                             break
                         }
                     }
                     if(splitStringArray?[2] != nil){
-                       // self.label2.text = splitStringArray?[2]
-                        bgImage?.frame = CGRect(x: 420, y: 175, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
+                      
+                        fbImage?.frame = CGRect(x: 420, y: 175, width: 200, height: 200)
+                        self.view.addSubview(fbImage!)
                         self.view.addSubview(self.label2)
-                        self.label2.bringSubviewToFront(self.label2)
+                       // self.label2.bringSubviewToFront(self.label2)
                         self.label2.text = splitStringArray?[2]
                         i+=1;
                         if( i == numOfWords?.count){
@@ -362,11 +366,11 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                         }
                     }
                     if(splitStringArray?[3] != nil){
-                        //self.label3.text = splitStringArray?[3]
-                        bgImage?.frame = CGRect(x: 620, y: 225, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
+                       
+                        fbImage?.frame = CGRect(x: 620, y: 225, width: 200, height: 200)
+                        self.view.addSubview(fbImage!)
                         self.view.addSubview(self.label3)
-                        self.label3.bringSubviewToFront(self.label3)
+                       // self.label3.bringSubviewToFront(self.label3)
                         self.label3.text = splitStringArray?[3]
                         i+=1;
                         if( i == numOfWords?.count){
@@ -374,11 +378,11 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                         }
                     }
                     if(splitStringArray?[4] != nil){
-                       // self.label4.text = splitStringArray?[4]
-                        bgImage?.frame = CGRect(x: 820, y: 175, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
+                      
+                        fbImage?.frame = CGRect(x: 820, y: 175, width: 200, height: 200)
+                        self.view.addSubview(fbImage!)
                         self.view.addSubview(self.label4)
-                        self.label4.bringSubviewToFront(self.label4)
+                       // self.label4.bringSubviewToFront(self.label4)
                         self.label4.text = splitStringArray?[4]
                         i+=1;
                         if( i == numOfWords?.count){
@@ -386,11 +390,11 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                         }
                     }
                     if(splitStringArray?[5] != nil){
-                        //self.label5.text = splitStringArray?[5]
-                        bgImage?.frame = CGRect(x: 20, y: 375, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
+                        
+                        fbImage?.frame = CGRect(x: 20, y: 375, width: 200, height: 200)
+                        self.view.addSubview(fbImage!)
                         self.view.addSubview(self.label5)
-                        self.label5.bringSubviewToFront(self.label5)
+                      //  self.label5.bringSubviewToFront(self.label5)
                         self.label5.text = splitStringArray?[5]
                         i+=1;
                         if( i == numOfWords?.count){
@@ -398,11 +402,11 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                         }
                     }
                     if(splitStringArray?[6] != nil){
-                        //self.label6.text = splitStringArray?[6]
-                        bgImage?.frame = CGRect(x: 220, y: 425, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
+                    
+                        fbImage?.frame = CGRect(x: 220, y: 425, width: 200, height: 200)
+                        self.view.addSubview(fbImage!)
                         self.view.addSubview(self.label6)
-                        self.label6.bringSubviewToFront(self.label6)
+                       // self.label6.bringSubviewToFront(self.label6)
                         self.label6.text = splitStringArray?[6]
                         i+=1;
                         if( i == numOfWords?.count){
@@ -410,10 +414,10 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                         }
                     }
                     if(splitStringArray?[7] != nil){
-                        bgImage?.frame = CGRect(x: 420, y: 375, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
+                        fbImage?.frame = CGRect(x: 420, y: 375, width: 200, height: 200)
+                        self.view.addSubview(fbImage!)
                         self.view.addSubview(self.label7)
-                        self.label7.bringSubviewToFront(self.label7)
+                     //   self.label7.bringSubviewToFront(self.label7)
                         self.label7.text = splitStringArray?[7]
                         //self.label7.text = splitStringArray?[7]
                         i+=1;
@@ -422,10 +426,10 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                         }
                     }
                     if(splitStringArray?[8] != nil){
-                        bgImage?.frame = CGRect(x: 620, y: 425, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
+                        fbImage?.frame = CGRect(x: 620, y: 425, width: 200, height: 200)
+                        self.view.addSubview(fbImage!)
                         self.view.addSubview(self.label8)
-                        self.label8.bringSubviewToFront(self.label8)
+                      //  self.label8.bringSubviewToFront(self.label8)
                         self.label8.text = splitStringArray?[8]
                        // self.label8.text = splitStringArray?[8]
                         i+=1;
@@ -434,10 +438,10 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                         }
                     }
                     if(splitStringArray?[9] != nil){
-                        bgImage?.frame = CGRect(x: 820, y: 375, width: 200, height: 200)
-                        self.view.addSubview(bgImage!)
+                        fbImage?.frame = CGRect(x: 820, y: 375, width: 200, height: 200)
+                        self.view.addSubview(fbImage!)
                         self.view.addSubview(self.label9)
-                        self.label9.bringSubviewToFront(self.label9)
+                      //  self.label9.bringSubviewToFront(self.label9)
                         self.label9.text = splitStringArray?[9]
                         //self.label9.text = splitStringArray?[9]
                         i+=1;
