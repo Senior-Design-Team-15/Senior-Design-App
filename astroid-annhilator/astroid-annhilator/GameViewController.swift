@@ -80,7 +80,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
         super.viewDidLoad()
         //Setting up labels for question label and individual asteroid labels
         //Come back to add changing questions to labelQ.text
-        labelQ = UILabel(frame: CGRect(x:75,y: 65,width: 1500,height: 75))
+        labelQ = UILabel(frame: CGRect(x:75,y: 100,width: 1500,height: 75))
         labelQ.textAlignment = NSTextAlignment.left
         labelQ.textColor = .white
         labelQ.font = UIFont(name:"HelveticaNeue-Bold", size: 30.0)
@@ -92,7 +92,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
         label0.textAlignment = NSTextAlignment.center
         label0.textColor = .black
         label0.font = UIFont(name:"HelveticaNeue-Bold", size: 30.0)
-        label0.text = ""
+        label0.text = "hi"
         self.view.addSubview(label0)
         
         label1 = UILabel(frame: CGRect(x:250,y: 275,width: 150,height: 75))
@@ -159,7 +159,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.view.addSubview(label9)
         //
         
-        labelQ.isHidden = true//Question initally hidden, GameScene sets it show up in 2 seconds
+        labelQ.isHidden = false//question not hidden initally
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: "GameScene") {
                 scene.scaleMode = .aspectFill
@@ -276,6 +276,8 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     func startRecording() {
+    
+    
         
         if recognitionTask != nil {  //1
             recognitionTask?.cancel()
@@ -342,7 +344,6 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                         }
                     }
                     if(splitStringArray?[1] != nil){
-                    
                         i+=1;
                         fbImage?.frame = CGRect(x: 220, y: 225, width: 200, height: 200)
                         self.view.addSubview(fbImage!)
@@ -478,6 +479,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
         }
         
         //textView.isHidden = false;
+        //self.textView.bringSubviewToFront(self.textView)
         textView.text = "Say something, I'm listening!"
         
     }

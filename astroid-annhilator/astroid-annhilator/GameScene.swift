@@ -31,7 +31,7 @@ class GameScene: SKScene {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             if let vc = appDelegate.window?.rootViewController {
                 self.viewController = vc as? GameViewController
-                //self.viewController.labelQ.isHidden = false
+               // self.viewController.labelQ.isHidden = false
             }
             
         })
