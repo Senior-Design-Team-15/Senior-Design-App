@@ -114,30 +114,38 @@
                                 <rect key="frame" x="-92" y="-33" width="1209" height="834"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="4Lw-Av-HiH">
+                                <rect key="frame" x="228" y="146" width="335" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="5dC-Ow-t72">
+                                <rect key="frame" x="486" y="582" width="281" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="jZY-3e-xNk">
-                                <rect key="frame" x="275" y="-28.5" width="474" height="825"/>
+                                <rect key="frame" x="393.5" y="121.5" width="237" height="525"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayButton" translatesAutoresizingMaskIntoConstraints="NO" id="J1R-HU-ApM">
-                                        <rect key="frame" x="0.0" y="0.0" width="474" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="237.00000000000006" height="50"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayButton" translatesAutoresizingMaskIntoConstraints="NO" id="bNm-r3-EbH">
-                                        <rect key="frame" x="0.0" y="145" width="474" height="100"/>
+                                        <rect key="frame" x="0.0" y="95" width="237.00000000000006" height="50"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayButton" translatesAutoresizingMaskIntoConstraints="NO" id="fyO-s4-p0A">
-                                        <rect key="frame" x="0.0" y="290" width="474" height="100"/>
+                                        <rect key="frame" x="0.0" y="190" width="237.00000000000006" height="50"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayButton" translatesAutoresizingMaskIntoConstraints="NO" id="pzb-W5-sqz">
-                                        <rect key="frame" x="0.0" y="435" width="474" height="100"/>
+                                        <rect key="frame" x="0.0" y="285" width="237.00000000000006" height="50"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwu-7R-QGg">
-                                        <rect key="frame" x="0.0" y="580" width="474" height="100"/>
+                                        <rect key="frame" x="0.0" y="380" width="237.00000000000006" height="50"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Instructions" backgroundImage="grayButton">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGc-dJ-RSL">
-                                        <rect key="frame" x="0.0" y="725" width="474" height="100"/>
+                                        <rect key="frame" x="0.0" y="475" width="237.00000000000006" height="50"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="About" backgroundImage="grayButton">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -209,6 +217,18 @@
                                 </subviews>
                                 <rect key="contentStretch" x="0.0" y="0.45000000000000001" width="1" height="1"/>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="tZ1-z3-INl">
+                                <rect key="frame" x="0.0" y="10" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="eDv-8o-mwj">
+                                <rect key="frame" x="106" y="513" width="92" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="9T9-jq-A17">
+                                <rect key="frame" x="830" y="293" width="311" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -309,6 +329,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="Mob-gk-hgA">
+                                <rect key="frame" x="130" y="245" width="146" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-Zv-cqw">
                                 <rect key="frame" x="183" y="298" width="658" height="221"/>
                                 <subviews>
@@ -373,6 +397,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="DlP-Ep-TPW">
+                                <rect key="frame" x="-41" y="634" width="317" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="VRD-kw-ayb">
+                                <rect key="frame" x="852" y="84" width="152" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-Oi-Esr">
+                                <rect key="frame" x="671" y="527" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
