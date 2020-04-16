@@ -36,10 +36,38 @@
                                 <rect key="frame" x="-61" y="-162" width="1305" height="1229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="wZM-pe-5LO">
+                                <rect key="frame" x="186" y="0.0" width="652" height="366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="zCe-Ce-VFD">
+                                <rect key="frame" x="20" y="541" width="296" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="n2E-Jh-3H9">
+                                <rect key="frame" x="846" y="97" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="KAs-rX-YmB">
+                                <rect key="frame" x="87" y="168" width="162" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="u5G-pP-vWH">
+                                <rect key="frame" x="531" y="361" width="283" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="hzA-Bp-QUb">
+                                <rect key="frame" x="672" y="640" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="msZ-Ta-Goe">
+                                <rect key="frame" x="-93" y="238" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psO-5Q-q9X">
                                 <rect key="frame" x="324" y="258" width="376" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="52"/>
                                 <state key="normal" title="PLAY" backgroundImage="fireball">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -47,10 +75,6 @@
                                     <segue destination="BV1-FR-VrT" kind="push" id="gHt-RZ-Nhe"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="wZM-pe-5LO">
-                                <rect key="frame" x="186" y="0.0" width="652" height="366"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feY-4Z-ObA">
                                 <rect key="frame" x="802" y="554" width="202" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -64,6 +88,10 @@
                                     <segue destination="Oa6-t9-PDU" kind="push" id="l0w-36-cyH"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rocket" translatesAutoresizingMaskIntoConstraints="NO" id="NDi-aq-0MD">
+                                <rect key="frame" x="364" y="591" width="296" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Qqi-bK-lu7"/>
@@ -87,29 +115,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="jZY-3e-xNk">
-                                <rect key="frame" x="393.5" y="121.5" width="237" height="525"/>
+                                <rect key="frame" x="275" y="-28.5" width="474" height="825"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayButton" translatesAutoresizingMaskIntoConstraints="NO" id="J1R-HU-ApM">
-                                        <rect key="frame" x="0.0" y="0.0" width="237.00000000000006" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="474" height="100"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayButton" translatesAutoresizingMaskIntoConstraints="NO" id="bNm-r3-EbH">
-                                        <rect key="frame" x="0.0" y="95" width="237.00000000000006" height="50"/>
+                                        <rect key="frame" x="0.0" y="145" width="474" height="100"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayButton" translatesAutoresizingMaskIntoConstraints="NO" id="fyO-s4-p0A">
-                                        <rect key="frame" x="0.0" y="190" width="237.00000000000006" height="50"/>
+                                        <rect key="frame" x="0.0" y="290" width="474" height="100"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayButton" translatesAutoresizingMaskIntoConstraints="NO" id="pzb-W5-sqz">
-                                        <rect key="frame" x="0.0" y="285" width="237.00000000000006" height="50"/>
+                                        <rect key="frame" x="0.0" y="435" width="474" height="100"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwu-7R-QGg">
-                                        <rect key="frame" x="0.0" y="380" width="237.00000000000006" height="50"/>
+                                        <rect key="frame" x="0.0" y="580" width="474" height="100"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Instructions" backgroundImage="grayButton">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGc-dJ-RSL">
-                                        <rect key="frame" x="0.0" y="475" width="237.00000000000006" height="50"/>
+                                        <rect key="frame" x="0.0" y="725" width="474" height="100"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="About" backgroundImage="grayButton">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -206,24 +234,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sw1-AA-hwj" userLabel="Microphone Button">
-                                <rect key="frame" x="811" y="124" width="108" height="43"/>
+                                <rect key="frame" x="811" y="124" width="178" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Start Recording"/>
                                 <connections>
                                     <action selector="microphoneTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ccG-lG-Lw9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qPw-Di-XAd" userLabel="End Button">
-                                <rect key="frame" x="811" y="675" width="108" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GAME OVER"/>
-                                <connections>
-                                    <action selector="microphoneTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="9ir-0Z-ePe"/>
-                                    <segue destination="Xe3-ci-qxi" kind="push" id="6WH-W6-SxI"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="This is the UITextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F0Z-Vh-uZw">
-                                <rect key="frame" x="36" y="124" width="953" height="240"/>
+                                <rect key="frame" x="36" y="107" width="953" height="240"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -234,13 +254,24 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IJB-xf-0uA" userLabel="Next Button">
-                                <rect key="frame" x="798" y="624" width="134" height="43"/>
+                                <rect key="frame" x="798" y="624" width="191" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NEW QUESTION"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Next Question"/>
                                 <connections>
                                     <action selector="microphoneTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="eBo-vT-qeY"/>
                                     <action selector="stepperForQ:" destination="BV1-FR-VrT" eventType="touchUpInside" id="czl-WT-KpT"/>
                                     <segue destination="BV1-FR-VrT" kind="push" id="2i5-hC-Tld"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qPw-Di-XAd" userLabel="End Button">
+                                <rect key="frame" x="804" y="675" width="178" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Progress Report"/>
+                                <connections>
+                                    <action selector="microphoneTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="9ir-0Z-ePe"/>
+                                    <segue destination="Xe3-ci-qxi" kind="push" id="6WH-W6-SxI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -365,11 +396,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="asteroid" width="148.5" height="145"/>
         <image name="fireball" width="138.5" height="123"/>
         <image name="galaxy" width="640" height="427"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="grayButton" width="237" height="50"/>
         <image name="name" width="324" height="74.5"/>
+        <image name="rocket" width="244" height="426.5"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

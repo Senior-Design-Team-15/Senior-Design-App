@@ -1,4 +1,3 @@
-Easy: Where
 Where does milk come from?
 Where do horses, pigs, and sheep live? 
 Where do you put a hat when you wear it?
@@ -24,7 +23,6 @@ Where was the last place you went out to dinner?
 Where are you sitting?
 Where do you watch TV?
 Where do you go to fly on an airplane?
-Easy: What
 What can you wear on our back?
 What do bees make?
 What do dogs like to chew on?
@@ -40,7 +38,7 @@ What makes you feel happy?
 What do you watch shows on?
 What things make you laugh?
 What is the loudest noise you've ever heard?
-What do you usually think about just before going to sleep at night?
+What do you think about when you going to sleep at night?
 What do you see outside?
 What color is your shirt?
 What color are your pants?
@@ -50,11 +48,10 @@ What animal says bah?
 What pets do you have?
 What is your favorite season?
 What is your favorite game?
-Medium: When
 When do you go to bed?
 When do you eat breakfast? 
 When do you take a bath?
-When do 12you wear sunglasses?
+When do you wear sunglasses?
 When do you put on a band aid?
 When do you use an umbrella?
 When do you wear a coat?
@@ -76,7 +73,6 @@ When do you get in trouble?
 When do you hug your parents?
 When do you dress up in a costume?
 When do you celebrate your birthday?
-Medium: Who
 Who puts out fires?
 Who do you go see when we're sick?
 Who teaches you at school?
@@ -102,7 +98,6 @@ Who throws a football to the receivers?
 Who makes music for a living?
 Who paints or draws for a living?
 Who arrests bad guys for a living?
-Hard: Why
 Why do you put gas in a car?
 Why does a giraffe have a long neck?
 Why do you mow the grass?
@@ -128,7 +123,6 @@ Why do you wear your seatbelt?
 Why do you look before crossing the street?
 Why do you say please and thank you?
 Why do you love your parents?
-Hard: How
 How do you ride a bike?
 How do you call someone on the phone?
 How do you ride across the ocean?

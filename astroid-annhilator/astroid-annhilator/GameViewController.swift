@@ -84,7 +84,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
 
         
         //Setting up labels for question label and individual asteroid labels
-        labelQ = UILabel(frame: CGRect(x:75,y: 100,width: 1500,height: 75))
+        labelQ = UILabel(frame: CGRect(x:50,y: 100,width: 1500,height: 75))
         labelQ.textAlignment = NSTextAlignment.left
         labelQ.textColor = .white
         labelQ.font = UIFont(name:"HelveticaNeue-Bold", size: 30.0)
@@ -93,7 +93,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
             do {
                 let data = try String(contentsOfFile: path, encoding: .utf8)
                 let myStrings = data.components(separatedBy: .newlines)
-                var randomQ = Int.random(in: 0 ... 310)//pick random number 1 through 310, 310 bc thats how many options in array from reading in text file
+                var randomQ = Int.random(in: 0 ... 298)//pick random number 1 through 298, 298 bc thats how many options in array from reading in text file
                 if(randomQ % 2 == 0){//questions are only in even indicies in array
                     labelQ.text = myStrings[randomQ]
                 }else{
