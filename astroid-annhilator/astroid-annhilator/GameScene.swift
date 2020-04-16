@@ -22,16 +22,12 @@ class GameScene: SKScene {
             label.alpha = 0.0
             label.run(SKAction.fadeIn(withDuration: 2.0))
         }
-      //  if (self.viewController.label0.text != "Label 0"){
-      //      let astroid0=SKSpriteNode(imageNamed: "fireball")
-      //      astroid0.position=CGPoint(x:125 , y: 500)
-      //      self.addChild(astroid0)
-      //  }
+      
         self.run(SKAction.wait(forDuration: 2),completion:{[unowned self] in
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             if let vc = appDelegate.window?.rootViewController {
                 self.viewController = vc as? GameViewController
-               // self.viewController.labelQ.isHidden = false
+               
             }
             
         })

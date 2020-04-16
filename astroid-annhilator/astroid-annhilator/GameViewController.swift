@@ -16,6 +16,7 @@ import Speech
 class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     var gameScene : GameScene!
+    var n = 2
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -55,8 +56,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
    
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var microphoneButton: UIButton!
-    
-    
+
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))!
     
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -75,16 +75,37 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
     var label7:UILabel!
     var label8:UILabel!
     var label9:UILabel!
+    var Q = ""
+  //  var n = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+        
         //Setting up labels for question label and individual asteroid labels
-        //Come back to add changing questions to labelQ.text
         labelQ = UILabel(frame: CGRect(x:75,y: 100,width: 1500,height: 75))
         labelQ.textAlignment = NSTextAlignment.left
         labelQ.textColor = .white
         labelQ.font = UIFont(name:"HelveticaNeue-Bold", size: 30.0)
-        labelQ.text = "What did you have for breakfast?"
+       
+        if let path = Bundle.main.path(forResource: "questions", ofType: "txt") {
+            do {
+                let data = try String(contentsOfFile: path, encoding: .utf8)
+                let myStrings = data.components(separatedBy: .newlines)
+                var randomQ = Int.random(in: 0 ... 310)//pick random number 1 through 310, 310 bc thats how many options in array from reading in text file
+                if(randomQ % 2 == 0){//questions are only in even indicies in array
+                    labelQ.text = myStrings[randomQ]
+                }else{
+                    labelQ.text = myStrings[randomQ+1]//if not even, add one to make it even
+                }
+             
+
+            } catch {
+                print("Ooops! Something went wrong reading text file: \(error)")
+            }
+        }
+    
         self.view.addSubview(labelQ)
         
         //adding individual label containers for asteroids
@@ -92,7 +113,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
         label0.textAlignment = NSTextAlignment.center
         label0.textColor = .black
         label0.font = UIFont(name:"HelveticaNeue-Bold", size: 30.0)
-        label0.text = "hi"
+        label0.text = ""
         self.view.addSubview(label0)
         
         label1 = UILabel(frame: CGRect(x:250,y: 275,width: 150,height: 75))
@@ -262,7 +283,12 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
         }
     }
 
-
+    @IBAction func stepperForQ(_ sender: Any) {
+       // n = n+2
+        //func viewDidLoad()
+       // print(n)
+    }
+    
     @IBAction func microphoneTapped(_ sender: Any) {
         if audioEngine.isRunning {
             audioEngine.stop()
@@ -320,6 +346,7 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                 let components = voiceToTextOutput?.components(separatedBy: .whitespacesAndNewlines)//seperate array by white spaces and newline characters
                 let numOfWords = components?.filter { !$0.isEmpty }//numOfWords.count keeps track of how many words have been said
                 print(numOfWords?.count)
+                
                 let splitStringArray = voiceToTextOutput?.split(separator: " ").map({ (substring) in//splitting input sentence into an array with a single word in each loation
                     return String(substring)//returns subString so cast to a String
                 })
