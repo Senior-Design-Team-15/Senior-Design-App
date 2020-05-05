@@ -10,6 +10,14 @@
 		9A095B5F241577FC00A7AD19 /* questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A095B5E241577FC00A7AD19 /* questions.txt */; };
 		9A9CC0BD23FCA34C0068BA1E /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9CC0BC23FCA34C0068BA1E /* GameSprite.swift */; };
 		9A9CC0BF24049FC30068BA1E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9CC0BE24049FC30068BA1E /* Button.swift */; };
+		9AAE9E9F2460FB9000557E5B /* instructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE9E9E2460FB9000557E5B /* instructionsViewController.swift */; };
+		9AAE9EA12461012B00557E5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE9EA02461012B00557E5B /* SettingsViewController.swift */; };
+		9AAE9EA32461068400557E5B /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE9EA22461068400557E5B /* aboutViewController.swift */; };
+		9AAE9EA5246116B800557E5B /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE9EA4246116B800557E5B /* LevelViewController.swift */; };
+		9AAE9EA724611F3700557E5B /* level.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAE9EA624611F3700557E5B /* level.txt */; };
+		9AAE9EA924612C7200557E5B /* repeatQ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAE9EA824612C7200557E5B /* repeatQ.txt */; };
+		9AF06AF8244D2EFB00A91BD0 /* output.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AF06AF7244D2EFB00A91BD0 /* output.txt */; };
+		9AF06AFE244D369F00A91BD0 /* ProgressReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF06AFD244D369F00A91BD0 /* ProgressReportViewController.swift */; };
 		D1F60C6723A03DAB0025E3C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F60C6623A03DAB0025E3C4 /* AppDelegate.swift */; };
 		D1F60C6923A03DAB0025E3C4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D1F60C6823A03DAB0025E3C4 /* GameScene.sks */; };
 		D1F60C6B23A03DAB0025E3C4 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D1F60C6A23A03DAB0025E3C4 /* Actions.sks */; };
@@ -24,6 +32,14 @@
 		9A095B5E241577FC00A7AD19 /* questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = questions.txt; sourceTree = "<group>"; };
 		9A9CC0BC23FCA34C0068BA1E /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
 		9A9CC0BE24049FC30068BA1E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		9AAE9E9E2460FB9000557E5B /* instructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instructionsViewController.swift; sourceTree = "<group>"; };
+		9AAE9EA02461012B00557E5B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9AAE9EA22461068400557E5B /* aboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutViewController.swift; sourceTree = "<group>"; };
+		9AAE9EA4246116B800557E5B /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		9AAE9EA624611F3700557E5B /* level.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = level.txt; sourceTree = "<group>"; };
+		9AAE9EA824612C7200557E5B /* repeatQ.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = repeatQ.txt; sourceTree = "<group>"; };
+		9AF06AF7244D2EFB00A91BD0 /* output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
+		9AF06AFD244D369F00A91BD0 /* ProgressReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressReportViewController.swift; sourceTree = "<group>"; };
 		D1F60C6323A03DAB0025E3C4 /* astroid-annhilator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "astroid-annhilator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F60C6623A03DAB0025E3C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1F60C6823A03DAB0025E3C4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -73,9 +89,17 @@
 				D1F60C6A23A03DAB0025E3C4 /* Actions.sks */,
 				9A9CC0BE24049FC30068BA1E /* Button.swift */,
 				9A095B5E241577FC00A7AD19 /* questions.txt */,
+				9AF06AF7244D2EFB00A91BD0 /* output.txt */,
+				9AAE9EA624611F3700557E5B /* level.txt */,
+				9AAE9EA824612C7200557E5B /* repeatQ.txt */,
 				D1F60C6C23A03DAB0025E3C4 /* GameScene.swift */,
 				D1F60C6E23A03DAB0025E3C4 /* GameViewController.swift */,
+				9AAE9EA4246116B800557E5B /* LevelViewController.swift */,
+				9AF06AFD244D369F00A91BD0 /* ProgressReportViewController.swift */,
+				9AAE9E9E2460FB9000557E5B /* instructionsViewController.swift */,
 				D1F60C7023A03DAB0025E3C4 /* Main.storyboard */,
+				9AAE9EA02461012B00557E5B /* SettingsViewController.swift */,
+				9AAE9EA22461068400557E5B /* aboutViewController.swift */,
 				D1F60C7523A03DAD0025E3C4 /* LaunchScreen.storyboard */,
 				D1F60C7823A03DAD0025E3C4 /* Info.plist */,
 			);
@@ -142,8 +166,11 @@
 			files = (
 				D1F60C7223A03DAB0025E3C4 /* Main.storyboard in Resources */,
 				D1F60C6923A03DAB0025E3C4 /* GameScene.sks in Resources */,
+				9AAE9EA924612C7200557E5B /* repeatQ.txt in Resources */,
 				D1F60C7723A03DAD0025E3C4 /* LaunchScreen.storyboard in Resources */,
 				D1FEC30A23A2E11D0070D6D8 /* Assets.xcassets in Resources */,
+				9AF06AF8244D2EFB00A91BD0 /* output.txt in Resources */,
+				9AAE9EA724611F3700557E5B /* level.txt in Resources */,
 				9A095B5F241577FC00A7AD19 /* questions.txt in Resources */,
 				D1F60C6B23A03DAB0025E3C4 /* Actions.sks in Resources */,
 			);
@@ -157,10 +184,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9CC0BF24049FC30068BA1E /* Button.swift in Sources */,
+				9AAE9EA5246116B800557E5B /* LevelViewController.swift in Sources */,
 				D1F60C6D23A03DAB0025E3C4 /* GameScene.swift in Sources */,
+				9AAE9EA32461068400557E5B /* aboutViewController.swift in Sources */,
 				D1F60C6F23A03DAB0025E3C4 /* GameViewController.swift in Sources */,
+				9AF06AFE244D369F00A91BD0 /* ProgressReportViewController.swift in Sources */,
 				9A9CC0BD23FCA34C0068BA1E /* GameSprite.swift in Sources */,
+				9AAE9E9F2460FB9000557E5B /* instructionsViewController.swift in Sources */,
 				D1F60C6723A03DAB0025E3C4 /* AppDelegate.swift in Sources */,
+				9AAE9EA12461012B00557E5B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -76,30 +76,78 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
     var label8:UILabel!
     var label9:UILabel!
     var Q = ""
-  //  var n = 0
+    var level = ""
+    var savedQ = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        
+       // saveLevel()
+        print("before anything level should be nothing")
+        print(level)
         //Setting up labels for question label and individual asteroid labels
         labelQ = UILabel(frame: CGRect(x:50,y: 100,width: 1500,height: 75))
         labelQ.textAlignment = NSTextAlignment.left
         labelQ.textColor = .white
         labelQ.font = UIFont(name:"HelveticaNeue-Bold", size: 30.0)
-       
-        if let path = Bundle.main.path(forResource: "questions", ofType: "txt") {
+        if(level == ""){
+            do {
+            // get the documents folder url
+                if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                    // create the destination url for the text file to be saved
+                    let fileURL = documentDirectory.appendingPathComponent("level.txt")
+                    let savedLevel = try String(contentsOf: fileURL)
+                    if(savedLevel == "easy"){
+                        level = savedLevel
+                    }
+                    if(savedLevel == "medium"){
+                        level = savedLevel
+                    }
+                    if(savedLevel == "hard"){
+                        level = savedLevel
+                    }
+                    print("pulling level from file: ")
+                    print(level)
+                }
+            } catch {
+                print("error:", error)
+            }
+        }
+    
+//        if let path = Bundle.main.path(forResource: "repeatQ", ofType: "txt") {
+//            do {
+//                let data = try String(contentsOfFile: path, encoding: .utf8)
+//                let repeatedQ = data.components(separatedBy: .newlines)
+//                savedQ = repeatedQ[0]
+//            } catch {
+//                    print("Ooops! Something went wrong reading text file: \(error)")
+//            }
+//
+//            if(savedQ != ""){
+//                labelQ.text = savedQ
+            if let path = Bundle.main.path(forResource: "questions", ofType: "txt") {
             do {
                 let data = try String(contentsOfFile: path, encoding: .utf8)
                 let myStrings = data.components(separatedBy: .newlines)
-                var randomQ = Int.random(in: 0 ... 298)//pick random number 1 through 298, 298 bc thats how many options in array from reading in text file
+                var randomQ = 0
+                
+                if(level == "easy"){
+                    randomQ = Int.random(in: 0 ... 98)//pick random number 1 through 298, 298 bc thats how many options in array from reading in text file
+                }
+                if(level == "medium"){
+                    randomQ = Int.random(in: 100 ... 198)//pick random number 1 through 298, 298 bc thats how many options in array from reading in text file
+                }
+                if(level == "hard"){
+                    randomQ = Int.random(in: 200 ... 298)//pick random number 1 through 298, 298 bc thats how many options in array from reading in text file
+                }
+                
                 if(randomQ % 2 == 0){//questions are only in even indicies in array
                     labelQ.text = myStrings[randomQ]
                 }else{
                     labelQ.text = myStrings[randomQ+1]//if not even, add one to make it even
                 }
-             
+                saveLevel()
+
 
             } catch {
                 print("Ooops! Something went wrong reading text file: \(error)")
@@ -479,6 +527,30 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
                     }
                 }
                 isFinal = (result?.isFinal)!
+                
+                do {
+                    // get the documents folder url
+                    if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                        // create the destination url for the text file to be saved
+                        let fileURL = documentDirectory.appendingPathComponent("output.txt")
+                        // define the string/text to be saved
+                       // "\(x)"
+                        let text = "\(numOfWords?.count)"//"Hello World !!!"
+                        print(text.description)
+                        // writing to disk
+                        // Note: if you set atomically to true it will overwrite the file if it exists without a warning
+                        try text.write(to: fileURL, atomically: false, encoding: .utf8)
+                       // print("saving was successful")
+                        // any posterior code goes here
+                        // reading from disk
+                //        let savedText = try String(contentsOf: fileURL)
+                //        print("savedText:", savedText)   // "Hello World !!!\n"
+                //        documentDirectory.closeFile()
+                    }
+                } catch {
+                    print("error:", error)
+                }
+                
             }
             
             if error != nil || isFinal {  //10
@@ -518,5 +590,46 @@ class GameViewController: UIViewController, SFSpeechRecognizerDelegate {
             microphoneButton.isEnabled = false
         }
     }
+    
+    func saveLevel(){
+        do {
+            // get the documents folder url
+            if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            // create the destination url for the text file to be saved
+            let fileURL = documentDirectory.appendingPathComponent("level.txt")
+
+            let text = "\(level)"
+            print("in saveLevel...")
+            print(text)
+            // writing to disk
+            // Note: if you set atomically to true it will overwrite the file if it exists without a warning
+            try text.write(to: fileURL, atomically: true, encoding: .utf8)
+            // print("saving was successful")
+            //        let savedText = try String(contentsOf: fileURL)
+            //        print("savedText:", savedText)   // "Hello World !!!\n"
+            //        documentDirectory.closeFile()
+                           }
+        } catch {
+                print("error:", error)
+        }
+    }
+    
+//    @IBAction func repeatQuestion(_ sender: Any) {
+//       // labelQ.text
+//        do{
+//        // get the documents folder url
+//            if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+//            // create the destination url for the text file to be saved
+//            let fileURL = documentDirectory.appendingPathComponent("repeatQ.txt")
+//
+//            let text = "\(String(describing: labelQ.text))"
+//
+//            try text.write(to: fileURL, atomically: true, encoding: .utf8)
+//            }
+//        } catch{
+//                print("error:", error)
+//        }
+//
+//    }
 }
 
